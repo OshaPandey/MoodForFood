@@ -8,7 +8,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(JSON.stringify({ email: credentials.email, password: credentials.password }));
-    const response = await fetch("http://localhost:5000/api/loginuser", { // Change the endpoint URL to match the login API
+    const response = await fetch("https://moodforfood-backend.onrender.com/api/loginuser", { // Change the endpoint URL to match the login API
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
