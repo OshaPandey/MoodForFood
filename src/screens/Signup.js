@@ -26,9 +26,11 @@ export default function Signup() {
     });
 
     const json = await response.json();
-    console.log(json);
-    if (!json.success) { // Corrected the spelling from "sucsess" to "success"
-      alert("Enter valid credentials"); // Corrected "altert" to "alert"
+
+    if (json.success) {
+      setSignupSuccess(true); // Show success message
+    } else {
+      alert("Enter valid credentials");
     }
   };
 
